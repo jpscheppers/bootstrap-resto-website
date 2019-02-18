@@ -1,3 +1,3 @@
 # bootstrap-resto-website
 
-BeCode exercice: design a fully responsive design restaurant website.
+BeCode exercice: design a fully responsive restaurant website.
