@@ -1,0 +1,86 @@
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  font-family: 'Archivo', sans-serif;
+}
+
+.splash {
+  background-color: #006036;
+  overflow: hidden;
+}
+
+.carte {
+  color: #fff;
+  background-color: #006036;
+  border-style: dotted;
+  border-width: 0.1rem;
+  border-color: #fff;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  margin-left: 0.5em;
+}
+
+.center {
+  text-align: center;
+}
+
+hr.light {
+  color: #fff;
+  background-color: #fff;
+}
+
+/* anim */
+
+img.splash {
+  width: 500px;
+  margin: 0 auto;
+  animation-name: splashanim;
+  animation-duration: 2s;
+}
+
+.splashtree {
+  width: 150px;
+  height: 290px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  overflow:hidden;
+  opacity: 0;
+  animation-name: splashanim;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes splashanim {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #267F58;
+}
+
+.img-fluid img {
+   max-width:100%;
+   border
+}
+
+
+/* bootstrap modified classes */
+.border-bottom {
+  border-width: 2rem;
+}

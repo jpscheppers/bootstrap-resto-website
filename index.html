@@ -5,7 +5,8 @@
   <title>Cookie Clicker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <meta name="Cookie Clicker" content="Solyent green">
+  <meta name="Solyent Green Fine Cuisine®" content="Solyent Green">
+  <link href="https://fonts.googleapis.com/css?family=Archivo&#124;Playfair+Display" rel="stylesheet">
   <!--favicon -->
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -22,69 +23,297 @@
 </head>
 
 <body>
-  <div class="row" style="background-color: #006036">
-    <div class="col-12"><img src="assets/img/splash.png" /></div>
-  </div>
-  <!-- navigation bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Solyent Green Menu</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="">Accueil <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="carte.html">Carte</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="photos.html">Photos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="restaurants.html">Restaurants</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+  <!-- navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="#">Solyent Green Menu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">| Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carte.html">| La carte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="photos.html">| Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="restaurants.html">| Restaurants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">| Contact</a>
+          </li>
+      </div>
     </div>
   </nav>
+
+  <!-- splash -->
+  <div class="jumbotron jumbotron-fluid splash">
+    <div class="container">
+      <div class="row">
+        <div class="col-6"><img src="assets/img/splash.jpg" alt="Welcome to Solyent Green Fine Cuisine®" class="splash"/>
+        </div>
+        <div class="col-6"><img src="assets/img/tree.png" alt="tree" class="splashtree" /></div>
+      </div>
+    </div>
+  </div>
+
   <!-- main -->
   <main>
     <div class="container">
-      <h5>Exercice 1 : positionnement des blocs</h5>
+      <h1>A place for true gourmets</h1>
       <div class="row bg-light">
-        <div class="col-6 offset-sm-3">
+        <div class="col-10 offset-sm-1">
           <p>Bonjour, <span id="name">%name</span></p>
-          <p>Alii summum decus in carruchis solito altioribus et ambitioso vestium cultu ponentes sudant sub ponderibus lacernarum, quas in collis insertas cingulis ipsis adnectunt nimia subtegminum tenuitate perflabiles, expandentes eas crebris agitationibus maximeque sinistra, ut longiores fimbriae tunicaeque perspicue luceant varietate liciorum effigiatae in species animalium multiformes.</p></div>
+          <p>Alii summum decus in carruchis solito altioribus et ambitioso vestium cultu ponentes sudant sub ponderibus lacernarum, quas in collis insertas cingulis ipsis adnectunt nimia subtegminum tenuitate perflabiles, expandentes eas crebris agitationibus maximeque sinistra, ut longiores fimbriae tunicaeque perspicue luceant varietate liciorum effigiatae in species animalium multiformes.</p>
+        </div>
+      </div>
+      <hr class="my-4">
+
+<!-- carte -->
+<div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">menu1</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">menu2</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Entrées</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Plats</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+        <div class="carte">
+          <div class="center">
+            <h4>Menu uno <i class='fas fa-beer fa-sm'></i><span class="badge badge-warning">PROMO</span></h4>
+          </div>
+          <hr class="my-4 light">
+          <ul>
+            <li>
+              <p>Tapenade à la mode de Fukushima</p>
+            </li>
+            <li>
+              <p>Tartuffata verde al'ogm</p>
+            </li>
+            <li>
+              <p>Poulet fermier sauce Brawndo</p>
+            </li>
+            <li>
+              <p>Insectes de saison</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+        <div class="carte">
+          <div class="center">
+            <h4>Menu due <i class='fas fa-glass-cheers'></i><span class="badge badge-primary">BEST VALUE</span></h4>
+          </div>
+          <hr class="my-4 light">
+          <ul>
+            <li>
+              <p>Scarmoza de spiruline servi sur poële</p>
+            </li>
+            <li>
+              <p>Tartuffata verde al'ogm</p>
+            </li>
+            <li>
+              <p>Poulet fermier sauce Brawndo</p>
+            </li>
+            <li>
+              <p>Insectes de saison</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+        <div class="carte">
+          <div class="center">
+            <h4>Entrées <i class="fas fa-seedling"></i></h4>
+          </div>
+          <hr class="my-4 light">
+          <ul>
+            <li>
+              <p>Tapenade à la mode de Fukushima <span class="badge badge-pill badge-success">150d$</span></p>
+            </li>
+            <li>
+              <p>Tartuffata verde al'ogm <span class="badge badge-pill badge-success">150d$</span></p>
+            </li>
+            <li>
+              <p>Poulet fermier sauce Brawndo <span class="badge badge-pill badge-success">150d$</span></p>
+            </li>
+            <li>
+              <p>Insectes de saison <span class="badge badge-pill badge-success">200d$</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+        <div class="carte">
+          <div class="center">
+            <h4>Plats <i class="fas fa-seedling"></i></h4>
+          </div>
+          <hr class="my-4 light">
+          <ul>
+            <li>
+              <p>Tapenade à la mode de Fukushima <span class="badge badge-pill badge-success">200d$</span></p>
+            </li>
+            <li>
+              <p>Tartuffata verde al'ogm <span class="badge badge-pill badge-success">250d$</span></p>
+            </li>
+            <li>
+              <p>Poulet fermier sauce Brawndo <span class="badge badge-pill badge-success">300d$</span></p>
+            </li>
+            <li>
+              <p>Insectes de saison <span class="badge badge-pill badge-success">100d$</span></p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+
+<!--photos -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/green food smoothie__720.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/Green-Bread.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/images3.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/thai-green-chicken-curry-recipe-100317.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/green food smoothie__720.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/Green-Bread.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/images3.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/thai-green-chicken-curry-recipe-100317.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/green food smoothie__720.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/Green-Bread.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/images3.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <img src="assets/img/thai-green-chicken-curry-recipe-100317.jpg" alt="" class="img-fluid rounded"/>
+      </div>
+    </div>
+  </div>
+
+<!-- maps & infos -->
+  <h2>Resto 1</h2>
+  <h3>Where?</h3>
+  <p>
+    Mulholland Drive 66, Los Angeles, USA.
+  </p>
+  <h3>When?</h3>
+  <p>
+    Tuesday to Saturday: from 11:30 AM to 23:00
+  </p>
+  <div style="width: 100%"><iframe width="100%" height="350" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=mulholland%20drive%2C%20california+(Soylent%20Green%20Fine%20Cuisine)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Draw map route</a></iframe></div><br />
+  <h2>Resto 2</h2>
+  <h3>Where?</h3>
+  <p>
+    Madison Square Park <br />
+11 Madison Ave, New York, NY 10010, USA
+  </p>
+  <h3>When?</h3>
+  <p>
+    Tuesday to Saturday: from 11:30 AM to 23:00
+  </p>
+  <div style="width: 100%"><iframe width="100%" height="350" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=madison%20square%20park%20NYC+(Soylent%20Green%20Fine%20Cuisine)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Map a route</a></iframe></div><br />
+  <h2>Resto 3</h2>
+  <h3>Where?</h3>
+  <p>Long Island City, Building 7 <br />
+Queens, NY, USA
+  </p>
+  <h3>When?</h3>
+  <p>
+    Tuesday to Saturday: from 11:30 AM to 23:00
+  </p>
+  <div style="width: 100%"><iframe width="100%" height="350" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=long%20island%20city%20nyc+(Soylent%20Green%20Fine%20Cuisine)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Create a route on google maps</a></iframe></div><br />
+<!-- forms -->
+<form>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">@</div>
+    </div>
+    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-2">Checkbox</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          Example checkbox
+        </label>
+      </div>
+    </div>
+  </div>
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+   <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+     <option selected>Choose...</option>
+     <option value="1">One</option>
+     <option value="2">Two</option>
+     <option value="3">Three</option>
+   </select>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form>
+
+    <iframe src="photos.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
+    </iframe>
+
   </main>
 
-  <script src="assets/js/scripts.js"></script>
+</div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="assets/js/scripts.js"></script>
   </body>
 </html>
