@@ -1,26 +1,7 @@
- var myName = prompt("Cher visiteur, quel est votre prénom?");
-document.getElementById("promptname").textContent= myName;
 
-// Récupération du champ à enregistrer
-var champ = document.getElementById("promptname");
-
-// Vérification de l'existence d'une donnée enregistrée auparavant
-// (ce ne sera le cas que si la page a été rafraîchie)
-if (sessionStorage.getItem("autosave")) {
-  // Restauration du contenu du champ
-  champ.value = sessionStorage.getItem("autosave");
-}
-
-// Écoute des changements de valeur du champ
-champ.addEventListener("change", function() {
-  // Enregistrement de la saisie utilisateur dans le stockage de session
-  sessionStorage.setItem("autosave", champ.value);
-});
 
 
 // display date
-/*
-(function() {
 
   var d = new Date();
   var userDay = d.getUTCDate();
@@ -30,7 +11,7 @@ champ.addEventListener("change", function() {
   var userMinute = d.getMinutes();
 
   var weekday = new Array(7);
-  weekday[0] =  "dimanche";
+  weekday[0] = "dimanche";
   weekday[1] = "lundi";
   weekday[2] = "mardi";
   weekday[3] = "mercredi";
@@ -38,13 +19,7 @@ champ.addEventListener("change", function() {
   weekday[5] = "vendredi";
   weekday[6] = "samedi";
 
-  var openClosed = "";
-
-  if (weekday !== "dimanche" && !== "lundi") {
-    openClosed = "ouverts";
-  } else {
-    openClosed = "fermés";
-  };
+  var openOrClosed = "";
 
   var currentDay = weekday[d.getDay()];
 
@@ -54,20 +29,46 @@ champ.addEventListener("change", function() {
   // proper numbers fix
   userMonth = (userMonth + 1);
 
-  console.log(d);
+  /* console.log(d);
   console.log(userDay);
   console.log(userMonth);
   console.log(userYear);
-  console.log(monthName);
-  // display  0 in front of months and days > 10
+  console.log(monthName); */
+
+
+  // display  0 in front of months and days < 10 and hours < 10 and minutes < 10
     if (userMonth < 10) {
       userMonth = ('0' + userMonth);
     };
     if (userDay < 10) {
       userDay = ('0' + userDay);
     };
+    if (userHour < 10) {
+      userHour = ('0' + userHour);
+    }
+    if (userMinute < 10) {
+      userMinute = ('0' + userMinute);
+    }
+    //console.log(userHour);
+    //console.log(userMinute);
 
-  document.getElementById("myDate").textContent=('Nous sommes le ' + currentDay + ' ' + userDay + ' ' + currentMonth + ' ' + userYear + ' - ' + userHour + ':' + userMinute);
-  document.getElementById("openClosed").textContent=( openClosed );
-})();
-*/
+    if ((currentDay === "dimanche") || (currentDay === "lundi") || (userHour < 12)) {
+      openOrClosed = "fermés";
+      //console.log(currentDay);
+      //console.log(openOrClosed);
+    } else {
+      openOrClosed = "ouverts";
+      //console.log(currentDay);
+      //console.log(openOrClosed);
+    };
+
+
+// display date in HTML, but only do it if on the restaurant page, to avoid a console error
+function displayDate(){
+  document.getElementById("myDate").textContent=(currentDay + ' ' + userDay + ' ' + currentMonth + ' ' + userYear + ' - ' + userHour + ':' + userMinute);
+  document.getElementById("openClosed").textContent=( openOrClosed );
+};
+var myPage = document.title;
+if (myPage == "Soylent Green Fine Cuisine - Restaurants"){
+  displayDate();
+};

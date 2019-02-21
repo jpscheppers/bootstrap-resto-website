@@ -41,28 +41,71 @@ hr.light {
 img.splash {
   width: 500px;
   margin: 0 auto;
-  animation-name: splashanim;
+  animation-name: splashanimX;
   animation-duration: 2s;
+  transition-timing-function: ease-in;
 }
 
 .splashtree {
-  width: 150px;
-  height: 290px;
+  width: 140px;
+  height: 275px;
   margin: 0;
   padding: 0;
   float: right;
   overflow:hidden;
   opacity: 0;
-  animation-name: splashanim;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  animation-name: splashanimY;
+  animation-duration: 0.5s;
+  animation-delay: 1.15s;
   animation-fill-mode: forwards;
+  transition-timing-function: ease-in;
 }
 
-@keyframes splashanim {
+.splashtree2 {
+  width: 120px;
+  height: 250px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  overflow:hidden;
+  opacity: 0;
+  animation-name: splashanimY;
+  animation-duration: 0.5s;
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-in;
+}
+
+.splashtree3 {
+  width: 160px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  overflow:hidden;
+  opacity: 0;
+  animation-name: splashanimY;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-in;
+}
+
+@keyframes splashanimY {
   from {
     opacity: 0;
     transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes splashanimX {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
   }
   to {
     opacity: 1;
