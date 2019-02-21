@@ -74,6 +74,12 @@ h1 {
   color: #267F58;
 }
 
+h2 {
+  padding: 0.5rem 0 0.5rem 1rem;
+  color: #fff;
+  background-color: #006036;
+}
+
 .img-fluid img {
    max-width:100%;
    border

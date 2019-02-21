@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-  <title>Cookie Clicker</title>
+  <title>Soylent Green Fine Cuisine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta name="Solyent Green Fine Cuisine®" content="Solyent Green">
@@ -70,7 +70,7 @@
       <h1>A place for true gourmets</h1>
       <div class="row bg-light">
         <div class="col-10 offset-sm-1">
-          <p>Bonjour, <span id="name">%name</span></p>
+          <p>Bonjour, <span id="promptname">%name</span></p>
           <p>Alii summum decus in carruchis solito altioribus et ambitioso vestium cultu ponentes sudant sub ponderibus lacernarum, quas in collis insertas cingulis ipsis adnectunt nimia subtegminum tenuitate perflabiles, expandentes eas crebris agitationibus maximeque sinistra, ut longiores fimbriae tunicaeque perspicue luceant varietate liciorum effigiatae in species animalium multiformes.</p>
         </div>
       </div>
@@ -228,6 +228,7 @@
   </div>
 
 <!-- maps & infos -->
+  <p>Nous sommes le <span id="myDate">date et heure</span>, nos restaurants sont donc <span class="openClosed">ouverts / fermés</span>.</p>
   <h2>Resto 1</h2>
   <h3>Where?</h3>
   <p>
@@ -235,7 +236,7 @@
   </p>
   <h3>When?</h3>
   <p>
-    Tuesday to Saturday: from 11:30 AM to 23:00
+    Tuesday to Saturday: from 12:00 to 23:00
   </p>
   <div style="width: 100%"><iframe width="100%" height="350" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=mulholland%20drive%2C%20california+(Soylent%20Green%20Fine%20Cuisine)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Draw map route</a></iframe></div><br />
   <h2>Resto 2</h2>
@@ -246,7 +247,7 @@
   </p>
   <h3>When?</h3>
   <p>
-    Tuesday to Saturday: from 11:30 AM to 23:00
+    Tuesday to Saturday: from 12:00 to 23:00
   </p>
   <div style="width: 100%"><iframe width="100%" height="350" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=madison%20square%20park%20NYC+(Soylent%20Green%20Fine%20Cuisine)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Map a route</a></iframe></div><br />
   <h2>Resto 3</h2>
@@ -256,59 +257,63 @@ Queens, NY, USA
   </p>
   <h3>When?</h3>
   <p>
-    Tuesday to Saturday: from 11:30 AM to 23:00
+    Tuesday to Saturday: from 12:00 to 23:00
   </p>
   <div style="width: 100%"><iframe width="100%" height="350" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=long%20island%20city%20nyc+(Soylent%20Green%20Fine%20Cuisine)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Create a route on google maps</a></iframe></div><br />
 <!-- forms -->
-<form>
+<form name="SoylentForm">
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
+  <label for="SoylentForm" class="col-12"><h2>Contactez nous entre deux bouchées croustillantes !</h2></label>
+  </div>
+  <div class="form-group row">
+    <label for="inputUsername3" class="col-sm-2 col-form-label">Nom</label>
+    <div class="col-sm-6">
+      <input type="name" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Nom">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputFirstname3" class="col-sm-2 col-form-label">Prénom</label>
+    <div class="col-12 col-sm-6">
+      <input type="email" class="form-control" id="inputFirstname3" placeholder="Prénom">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail</label>
+    <div class="col-12 col-sm-6">
+      <div class="input-group-prepend">
+        <div class="input-group-text">@</div>
       <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-    </div>
-  </div>
-  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-  <div class="input-group mb-2 mr-sm-2">
-    <div class="input-group-prepend">
-      <div class="input-group-text">@</div>
-    </div>
-    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-  </div>
-  <div class="form-group row">
-    <div class="col-sm-2">Checkbox</div>
-    <div class="col-sm-10">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1">
-        <label class="form-check-label" for="gridCheck1">
-          Example checkbox
-        </label>
       </div>
     </div>
   </div>
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+  <div class="form-group row">
+    <div class="col-12 col-sm-8">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Objet du message</label>
    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-     <option selected>Choose...</option>
-     <option value="1">One</option>
-     <option value="2">Two</option>
-     <option value="3">Three</option>
+     <option selected>Vous nous contactez pour</option>
+     <option value="1">Effectuer une réservation</option>
+     <option value="2">Chanter nos louanges</option>
+     <option value="3">Faire une donation de corps anonyme</option>
+     <option value="4">La réponse D</option>
    </select>
+   </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-12 col-sm-8">
+      <label for="exampleFormControlTextarea1">Votre message</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+    </div>
+  </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" class="btn btn-primary">
+        <i class="far fa-envelope"> Envoyer</i>
+      </button>
     </div>
   </div>
 </form>
 
-    <iframe src="photos.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
-    </iframe>
-
-  </main>
+</main>
 
 </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
