@@ -6,6 +6,11 @@ p {
   font-family: 'Archivo', sans-serif;
 }
 
+main {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+
 .splash {
   background-color: #006036;
   overflow: hidden;
@@ -128,8 +133,34 @@ h2 {
    border
 }
 
+a, a:visited {
+  color: #006036;
+}
+a:hover {
+  color: #10b36c;
+}
 
 /* bootstrap modified classes */
 .border-bottom {
   border-width: 2rem;
+}
+
+.list-group-item.active {
+  background-color: #006036;
+  border-color: #006036;
+}
+
+.btn-primary {
+  background-color: #006036;
+  border-color: #006036;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #10b36c;
+  border-color: #10b36c;
+}
+
+.badge-primary {
+  background-color: rgb(255, 117, 24);
 }
